@@ -1,0 +1,12 @@
+.container {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100svw;
+	height: 100svh;
+	background-color: #000000;
+
+	transform-origin: center top;
+	pointer-events: none;
+	z-index: 2;
+}

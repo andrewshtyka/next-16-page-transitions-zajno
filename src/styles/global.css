@@ -1,0 +1,79 @@
+/* ================================================== */
+/* */
+/* BASE */
+
+body {
+	min-height: 100dvh;
+	overflow-x: hidden;
+	padding: 1rem;
+}
+
+.section {
+	min-height: 100svh;
+	display: flex;
+	flex-direction: column;
+	row-gap: 5rem;
+}
+
+.img {
+	margin-inline-start: auto;
+	width: 75%;
+	height: 100%;
+}
+
+.bg_constant {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100svw;
+	height: 100svh;
+	z-index: -2;
+	background-color: hsl(20, 20%, 85%);
+}
+
+.bg_new_page {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100svw;
+	height: 100svh;
+	z-index: -1;
+	background-color: hsl(0, 0%, 100%);
+}
+
+/* ================================================== */
+/* */
+/* APPEARANCE */
+::selection {
+}
+
+/* ================================================== */
+/* */
+/* View Transitions */
+
+::view-transition-group(root) {
+	z-index: auto !important;
+}
+
+::view-transition-old(root) {
+	animation: none !important;
+	z-index: 1;
+}
+
+::view-transition-new(root) {
+	z-index: 10000;
+	animation: reveal 1.75s cubic-bezier(0.8, 0, 0.2, 1) forwards;
+	will-change: clip-path;
+}
+
+@keyframes reveal {
+	0% {
+		clip-path: polygon(10% 85%, 90% 85%, 90% 85%, 10% 85%);
+	}
+	50% {
+		clip-path: polygon(5% 10%, 95% 10%, 95% 90%, 5% 90%);
+	}
+	100% {
+		clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+	}
+}

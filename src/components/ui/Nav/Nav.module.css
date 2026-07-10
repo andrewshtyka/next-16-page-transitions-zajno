@@ -1,0 +1,21 @@
+.list {
+	display: flex;
+	column-gap: 1em;
+	margin-block-end: 2rem;
+}
+
+.is_active {
+	position: relative;
+
+	&::after {
+		content: "";
+		position: absolute;
+		bottom: -0.15em;
+		left: 0;
+
+		height: 1px;
+		width: 100%;
+
+		background-color: #000000;
+	}
+}
