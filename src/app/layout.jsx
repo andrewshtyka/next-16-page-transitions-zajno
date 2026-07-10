@@ -22,8 +22,8 @@ import { ViewTransitions } from "next-view-transitions";
 // #endregion ===========================
 
 export const metadata = {
-	title: "Next.js 16 Project Starter",
-	description: "Description for Next.js 16 Project Starter",
+	title: "Page Transition #1",
+	description: "Page Transition #1",
 };
 
 export default function RootLayout({ children }) {
