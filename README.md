@@ -13,9 +13,10 @@ Inspired by: https://zajno.com/
 
 ### ⚠️ Not solved problems:
 1. Two and more sequential clicks on "Back" brake layout (visible artifacts).
+-> Block **buttons** until new page is loaded + offset time (about 2 sec).
 
-**Possible solution:**
-Block buttons until new page is loaded + offset time (about 2 sec).
+2. During navigation user can scroll.
+-> Block **scroll** until new page is loaded + offset time (about 2 sec).
 
 ---
 
