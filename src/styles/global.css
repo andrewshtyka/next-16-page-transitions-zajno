@@ -13,6 +13,8 @@ body {
 	display: flex;
 	flex-direction: column;
 	row-gap: 5rem;
+
+	padding-block-start: 5rem;
 }
 
 .list {

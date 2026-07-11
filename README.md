@@ -1,4 +1,4 @@
-# Next.js 16 Page Transition #1
+# Next.js 16 Page Transition #1 (View Transition API)
 
 **Two pages are visible at the same time.**
 
@@ -10,13 +10,16 @@ Inspired by: https://zajno.com/
 ### ✅ Done:
 1. Click on \<Link /> leads to the new page.
 2. Click on browser "Back" and "Forward" buttons runs animation properly.
+3. Scroll is blocked when navigation started. Unlocks after animation of transition is finished. Tested with 3g connection, works fine.
 
-### ⚠️ Not solved problems:
+### ❌ Not solved problems:
 1. Two and more sequential clicks on "Back" brake layout (visible artifacts). \
--> Block **buttons** until new page is loaded + offset time (about 2 sec).
+-> Intercept event and open first page.
 
-2. During navigation user can scroll. \
--> Block **scroll** until new page is loaded + offset time (about 2 sec).
+### ⚠️ Be cautious:
+**View Transition API has a built in 4 sec timeout.** \
+With slow connection, when you click on link and page is loading longer than 4 sec, NO animation will be played. \
+Therefore, requires page loading optimization.
 
 ---
 

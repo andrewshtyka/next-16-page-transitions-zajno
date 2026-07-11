@@ -2,6 +2,10 @@
 	display: flex;
 	column-gap: 1em;
 	margin-block-end: 2rem;
+	mix-blend-mode: difference;
+
+	color: #fff;
+	position: fixed;
 }
 
 .is_active {
@@ -16,6 +20,6 @@
 		height: 1px;
 		width: 100%;
 
-		background-color: #000000;
+		background-color: #fff;
 	}
 }

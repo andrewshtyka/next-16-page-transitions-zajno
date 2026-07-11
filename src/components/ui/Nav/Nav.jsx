@@ -63,7 +63,7 @@ const routerOptions = {
 	},
 };
 
-const TIME_BEFORE_INTERACTIVE_MS = 2000;
+const TIME_BEFORE_INTERACTIVE_MS = 2500;
 
 export default function Nav() {
 	const router = useTransitionRouter();
@@ -76,10 +76,18 @@ export default function Nav() {
 				return;
 			}
 			blockScroll(true);
-
 			router.push(path, routerOptions);
 		};
 	}
+
+	// React.useEffect(() => {
+	// 	function handler(e) {
+	// 		history.go(pathname);
+	// 	}
+
+	// 	window.addEventListener("popstate", handler);
+	// 	return () => window.removeEventListener("popstate", handler);
+	// }, [pathname]);
 
 	return (
 		<ul className={css.list}>
