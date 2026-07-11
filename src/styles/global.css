@@ -15,6 +15,12 @@ body {
 	row-gap: 5rem;
 }
 
+.list {
+	display: flex;
+	flex-direction: column;
+	row-gap: 5rem;
+}
+
 .img {
 	margin-inline-start: auto;
 	width: 75%;

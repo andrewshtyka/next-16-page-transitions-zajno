@@ -1,4 +1,4 @@
-// "use client";
+"use client";
 
 // #region ============================== Imports
 
@@ -6,7 +6,6 @@
 // import { motion } from "motion/react";
 
 // assets
-import img_src from "../../../public/images/img_h_4.webp";
 
 // components
 import Revealer from "@/components/ui/Revealer/Revealer";
@@ -14,6 +13,9 @@ import { BgNewPage } from "@/components/ui/Bg/Bg";
 import Image from "next/image";
 
 // constants
+
+// data
+import { imagesProjects } from "@/data/imagesProjects";
 
 // hooks
 
@@ -24,10 +26,20 @@ import Image from "next/image";
 
 // utility
 import React from "react";
+import { shuffle } from "lodash";
 
 // #endregion ===========================
 
 export default function ProjectsPage() {
+	const [images, setImages] = React.useState(imagesProjects);
+
+	React.useEffect(() => {
+		function handler() {
+			setImages(shuffle(imagesProjects));
+		}
+		handler();
+	}, []);
+
 	return (
 		<main>
 			<BgNewPage />
@@ -36,7 +48,22 @@ export default function ProjectsPage() {
 
 			<section className="section">
 				<h1 className="f_h1">Projects</h1>
-				<Image src={img_src} alt="" className="img" />
+
+				<ul className="list">
+					{images.map(({ id, src, alt }, i) => {
+						const loading = i === 0 ? "eager" : "lazy";
+
+						return (
+							<Image
+								key={id}
+								src={src}
+								alt={alt}
+								className="img"
+								loading={loading}
+							/>
+						);
+					})}
+				</ul>
 			</section>
 		</main>
 	);

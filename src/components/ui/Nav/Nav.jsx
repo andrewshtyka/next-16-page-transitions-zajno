@@ -53,6 +53,16 @@ const navItems = [
 	},
 ];
 
+const routerOptions = {
+	onTransitionReady: () => {
+		const id = setTimeout(() => {
+			blockScroll(false);
+		}, TIME_BEFORE_INTERACTIVE_MS);
+
+		return () => clearTimeout(id);
+	},
+};
+
 const TIME_BEFORE_INTERACTIVE_MS = 2000;
 
 export default function Nav() {
@@ -67,15 +77,7 @@ export default function Nav() {
 			}
 			blockScroll(true);
 
-			router.push(path, {
-				onTransitionReady: () => {
-					const id = setTimeout(() => {
-						blockScroll(false);
-					}, TIME_BEFORE_INTERACTIVE_MS);
-
-					return () => clearTimeout(id);
-				},
-			});
+			router.push(path, routerOptions);
 		};
 	}
 
