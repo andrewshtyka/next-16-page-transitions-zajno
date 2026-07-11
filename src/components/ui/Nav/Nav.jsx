@@ -17,6 +17,8 @@ import Link from "next/link";
 
 // providers / context
 
+// stores
+
 // styles
 import css from "./Nav.module.css";
 
@@ -24,6 +26,7 @@ import css from "./Nav.module.css";
 import React from "react";
 import { useTransitionRouter } from "next-view-transitions";
 import { usePathname } from "next/navigation";
+import { blockScroll } from "@/utils/blockScroll";
 
 // #endregion ===========================
 
@@ -50,6 +53,8 @@ const navItems = [
 	},
 ];
 
+const TIME_BEFORE_INTERACTIVE_MS = 2000;
+
 export default function Nav() {
 	const router = useTransitionRouter();
 	const pathname = usePathname();
@@ -60,7 +65,17 @@ export default function Nav() {
 				e.preventDefault();
 				return;
 			}
-			router.push(path);
+			blockScroll(true);
+
+			router.push(path, {
+				onTransitionReady: () => {
+					const id = setTimeout(() => {
+						blockScroll(false);
+					}, TIME_BEFORE_INTERACTIVE_MS);
+
+					return () => clearTimeout(id);
+				},
+			});
 		};
 	}
 

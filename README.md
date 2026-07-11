@@ -12,10 +12,10 @@ Inspired by: https://zajno.com/
 2. Click on browser "Back" and "Forward" buttons runs animation properly.
 
 ### ⚠️ Not solved problems:
-1. Two and more sequential clicks on "Back" brake layout (visible artifacts).
+1. Two and more sequential clicks on "Back" brake layout (visible artifacts). \
 -> Block **buttons** until new page is loaded + offset time (about 2 sec).
 
-2. During navigation user can scroll.
+2. During navigation user can scroll. \
 -> Block **scroll** until new page is loaded + offset time (about 2 sec).
 
 ---

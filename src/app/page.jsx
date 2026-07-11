@@ -1,4 +1,4 @@
-// "use client";
+"use client";
 
 // #region ============================== Imports
 
@@ -18,6 +18,8 @@ import { BgNewPage } from "@/components/ui/Bg/Bg";
 import Image from "next/image";
 
 // providers / context
+
+// stores
 
 // styles
 // import css from ''
