@@ -2,16 +2,10 @@
 /* */
 /* BASE */
 
-html {
-	background-color: hsl(20, 20%, 85%);
-}
-
 body {
 	min-height: 100dvh;
 	overflow-x: hidden;
 	padding: 1rem;
-
-	isolation: isolate;
 }
 
 .section {
@@ -21,18 +15,12 @@ body {
 	row-gap: 5rem;
 
 	padding-block-start: 5rem;
-
-	position: relative;
-	z-index: 1;
 }
 
 .list {
 	display: flex;
 	flex-direction: column;
 	row-gap: 5rem;
-
-	position: relative;
-	z-index: 1;
 }
 
 .img {
@@ -47,10 +35,8 @@ body {
 	left: 0;
 	width: 100svw;
 	height: 100svh;
+	z-index: -2;
 	background-color: hsl(20, 20%, 85%);
-	/* z-index: -2; */
-
-	z-index: 0;
 }
 
 .bg_new_page {
@@ -59,10 +45,8 @@ body {
 	left: 0;
 	width: 100svw;
 	height: 100svh;
+	z-index: -1;
 	background-color: hsl(0, 0%, 100%);
-	/* z-index: -1; */
-
-	z-index: 0;
 }
 
 /* ================================================== */

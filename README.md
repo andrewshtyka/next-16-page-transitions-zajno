@@ -5,6 +5,11 @@
 Live website: https://pt-1-shtyka.vercel.app/ \
 Inspired by: https://zajno.com/
 
+**Personal opinion:**
+- OK for simple fade in / fade out page transitions
+- not the best solution for complex transitions
+- hard to configure, hard to fix edge-cases (Safari, of course)
+
 ---
 
 ### ✅ Done:
@@ -22,8 +27,8 @@ With slow connection, when you click on link and page is loading longer than 4 s
 Therefore, requires page loading optimization.
 
 **2. Sometimes transition animation brakes (Safari)** \
-When animation is in progress, and you click on another link rapidly - Safari may skip animation and rapidly show destination page.
-Locally it doesn't happen, only in production.
+Sometimes click on link to another page makes the page black, and then transitions begins. Happens randomly. \
+Locally this behavior doesn't happen, only in production.
 
 ---
 

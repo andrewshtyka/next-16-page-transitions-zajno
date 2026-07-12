@@ -28,6 +28,7 @@ import React from "react";
 export default function BackForwardTransitionHandler() {
 	const activeTransition = React.useRef(null);
 
+	// block scroll when clicked on "Back"
 	React.useEffect(() => {
 		function handleBrowserButtons() {
 			blockScroll(true);
@@ -38,6 +39,9 @@ export default function BackForwardTransitionHandler() {
 			window.removeEventListener("popstate", handleBrowserButtons);
 	}, []);
 
+	// when clicked on "Back" rapidly couple of times:
+	// 1. show latest page
+	// 2. don't start transition from beginning
 	React.useEffect(() => {
 		if (!document.startViewTransition) return;
 
@@ -59,13 +63,12 @@ export default function BackForwardTransitionHandler() {
 				window.scrollTo(0, 0);
 			};
 
-			// const transition = original(callback);
 			const transition = original(wrappedCallback);
 			activeTransition.current = transition;
 
 			transition.finished
 				.catch(() => {
-					// Safari needs this
+					// for Safari
 				})
 				.finally(() => {
 					blockScroll(false);
