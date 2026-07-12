@@ -13,6 +13,7 @@ Inspired by: https://zajno.com/
 2. Click on browser "Back" and "Forward" buttons runs animation properly.
 3. Two and more rapid sequential clicks on "Back" and "Forward" buttons in browser don't brake animation.
 4. Scroll is blocked when navigation started. Unlocks after animation of transition is finished. Tested with 3g connection, works fine.
+5. When you scrolled down, and clicked on "Back" - next page always appears from top position.
 
 ### ⚠️ Be cautious:
 
@@ -20,8 +21,9 @@ Inspired by: https://zajno.com/
 With slow connection, when you click on link and page is loading longer than 4 sec, NO animation will be played. \
 Therefore, requires page loading optimization.
 
-**2. Sometimes transition animation brakes** \
+**2. Sometimes transition animation brakes (Safari)** \
 When animation is in progress, and you click on another link rapidly - Safari may skip animation and rapidly show destination page.
+Locally it doesn't happen, only in production.
 
 ---
 
