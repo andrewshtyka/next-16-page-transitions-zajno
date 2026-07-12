@@ -27,7 +27,7 @@ With slow connection, when you click on link and page is loading longer than 4 s
 Therefore, requires page loading optimization.
 
 **2. Sometimes transition animation brakes (Safari)** \
-Click on link to another page can makes the page black, and then transition begins. Happens randomly. \
+Click on link to another page can make the page black, and then transition begins. Happens randomly. \
 Locally this behavior doesn't happen, only in production.
 
 ---
