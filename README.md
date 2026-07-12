@@ -7,8 +7,9 @@ Inspired by: https://zajno.com/
 
 **Personal opinion:**
 - OK for simple fade in / fade out page transitions
-- not the best solution for complex transitions
-- hard to configure, hard to fix edge-cases (Safari MacOS)
+- OK for modern browsers (since late 2024)
+- Not the best solution for complex transitions
+- Hard to configure, hard to fix edge-cases (Safari MacOS)
 
 ---
 
