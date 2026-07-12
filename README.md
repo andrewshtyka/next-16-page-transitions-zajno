@@ -8,7 +8,7 @@ Inspired by: https://zajno.com/
 **Personal opinion:**
 - OK for simple fade in / fade out page transitions
 - not the best solution for complex transitions
-- hard to configure, hard to fix edge-cases (Safari, of course)
+- hard to configure, hard to fix edge-cases (Safari MacOS)
 
 ---
 
@@ -26,9 +26,10 @@ Inspired by: https://zajno.com/
 With slow connection, when you click on link and page is loading longer than 4 sec, NO animation will be played. \
 Therefore, requires page loading optimization.
 
-**2. Sometimes transition animation brakes (Safari)** \
+**2. Sometimes transition animation brakes (Safari MacOS)** \
 Click on link to another page can make the page black, and then transition begins. Happens randomly. \
-Locally this behavior doesn't happen, only in production.
+- Locally this behavior doesn't happen, only in production.
+- Safari on iOS and iPadOS works fine (both locally and in production).
 
 ---
 
