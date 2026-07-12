@@ -31,20 +31,22 @@ body {
 
 .bg_constant {
 	position: fixed;
-	top: 0;
-	left: 0;
-	width: 100dvw;
-	height: 100dvh;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 200dvw;
+	height: 200dvh;
 	z-index: -2;
 	background-color: hsl(20, 20%, 85%);
 }
 
 .bg_new_page {
 	position: fixed;
-	top: 0;
-	left: 0;
-	width: 100dvw;
-	height: 100dvh;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 200dvw;
+	height: 200dvh;
 	z-index: -1;
 	background-color: hsl(0, 0%, 100%);
 }
