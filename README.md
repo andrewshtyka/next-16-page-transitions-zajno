@@ -12,7 +12,7 @@ Inspired by: https://zajno.com/
 1. Click on \<Link /> leads to the new page.
 2. Click on browser "Back" and "Forward" buttons runs animation properly.
 3. Two and more rapid sequential clicks on "Back" and "Forward" buttons in browser don't brake animation.
-4. Scroll is blocked when navigation started. Unlocks after animation of transition is finished. Tested with 3g connection, works fine.
+4. Scroll is blocked when navigation started. Unlocks after animation of transition is finished.
 5. When you scrolled down, and clicked on "Back" - next page always appears from top position.
 
 ### ⚠️ Be cautious:
