@@ -61,17 +61,19 @@ body {
 
 ::view-transition-group(root) {
 	z-index: auto !important;
+	isolation: isolate;
 }
 
 ::view-transition-old(root) {
 	animation: none !important;
 	z-index: 1;
+	isolation: isolate;
 }
 
 ::view-transition-new(root) {
 	z-index: 10000;
-	animation: reveal 1.75s cubic-bezier(0.8, 0, 0.2, 1) forwards;
 	will-change: clip-path;
+	animation: reveal 1.75s cubic-bezier(0.8, 0, 0.2, 1) forwards;
 }
 
 @keyframes reveal {
