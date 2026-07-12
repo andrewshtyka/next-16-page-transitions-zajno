@@ -3,6 +3,7 @@
 // components
 import Nav from "@/components/ui/Nav/Nav";
 import { BgConstant } from "@/components/ui/Bg/Bg";
+import BackForwardTransitionHandler from "@/components/ui/BackForwardTransitionHandler/BackForwardTransitionHandler";
 
 // fonts
 import { font } from "@/utils/importFonts";
@@ -31,6 +32,7 @@ export default function RootLayout({ children }) {
 		<ViewTransitions>
 			<html lang="en" className={font.variable}>
 				<body>
+					<BackForwardTransitionHandler/>
 					<BgConstant />
 					<Nav />
 					{children}

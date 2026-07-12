@@ -53,19 +53,21 @@ const navItems = [
 	},
 ];
 
-const routerOptions = {
+const routerOptions = (callback) => ({
 	onTransitionReady: () => {
 		const id = setTimeout(() => {
 			blockScroll(false);
+			callback(false);
 		}, TIME_BEFORE_INTERACTIVE_MS);
 
 		return () => clearTimeout(id);
 	},
-};
+});
 
-const TIME_BEFORE_INTERACTIVE_MS = 2500;
+const TIME_BEFORE_INTERACTIVE_MS = 2200;
 
 export default function Nav() {
+	const [isLockedLink, setIsLockedLink] = React.useState(false);
 	const router = useTransitionRouter();
 	const pathname = usePathname();
 
@@ -76,18 +78,10 @@ export default function Nav() {
 				return;
 			}
 			blockScroll(true);
-			router.push(path, routerOptions);
+			setIsLockedLink(true);
+			router.push(path, routerOptions(setIsLockedLink));
 		};
 	}
-
-	// React.useEffect(() => {
-	// 	function handler(e) {
-	// 		history.go(pathname);
-	// 	}
-
-	// 	window.addEventListener("popstate", handler);
-	// 	return () => window.removeEventListener("popstate", handler);
-	// }, [pathname]);
 
 	return (
 		<ul className={css.list}>
@@ -101,6 +95,11 @@ export default function Nav() {
 							href={href}
 							className={`f_body_2 ${appliedClass}`}
 							onClick={handleNavigation(href)}
+							style={{
+								pointerEvents: isLockedLink
+									? "none"
+									: "initial",
+							}}
 						>
 							{title}
 						</Link>

@@ -8,15 +8,14 @@ Inspired by: https://zajno.com/
 ---
 
 ### ✅ Done:
+
 1. Click on \<Link /> leads to the new page.
 2. Click on browser "Back" and "Forward" buttons runs animation properly.
 3. Scroll is blocked when navigation started. Unlocks after animation of transition is finished. Tested with 3g connection, works fine.
-
-### ❌ Not solved problems:
-1. Two and more sequential clicks on "Back" brake layout (visible artifacts). \
--> Intercept event and open first page.
+4. Two and more rapid sequential clicks on "Back" / "Forward" buttons in browser don't brake animation.
 
 ### ⚠️ Be cautious:
+
 **View Transition API has a built in 4 sec timeout.** \
 With slow connection, when you click on link and page is loading longer than 4 sec, NO animation will be played. \
 Therefore, requires page loading optimization.
