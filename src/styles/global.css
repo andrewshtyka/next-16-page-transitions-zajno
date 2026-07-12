@@ -32,8 +32,9 @@ body {
 .bg_constant {
 	position: fixed;
 	top: 50%;
-	transform: translateY(-50%);
-	width: 100dvw;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 200dvw;
 	height: 200dvh;
 	z-index: -2;
 	background-color: hsl(20, 20%, 85%);
@@ -42,8 +43,9 @@ body {
 .bg_new_page {
 	position: fixed;
 	top: 50%;
-	transform: translateY(-50%);
-	width: 100dvw;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 200dvw;
 	height: 200dvh;
 	z-index: -1;
 	background-color: hsl(0, 0%, 100%);
