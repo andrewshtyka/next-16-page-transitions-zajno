@@ -32,9 +32,8 @@ body {
 .bg_constant {
 	position: fixed;
 	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	width: 200dvw;
+	transform: translateY(-50%);
+	width: 100dvw;
 	height: 200dvh;
 	z-index: -2;
 	background-color: hsl(20, 20%, 85%);
@@ -43,9 +42,8 @@ body {
 .bg_new_page {
 	position: fixed;
 	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	width: 200dvw;
+	transform: translateY(-50%);
+	width: 100dvw;
 	height: 200dvh;
 	z-index: -1;
 	background-color: hsl(0, 0%, 100%);
@@ -76,7 +74,6 @@ body {
 	z-index: 10000;
 	will-change: clip-path;
 	animation: reveal 1.75s cubic-bezier(0.8, 0, 0.2, 1) forwards;
-	transform-origin: center bottom;
 }
 
 @keyframes reveal {
