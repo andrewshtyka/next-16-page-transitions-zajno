@@ -64,7 +64,7 @@ const routerOptions = (callback) => ({
 	},
 });
 
-const TIME_BEFORE_INTERACTIVE_MS = 2200;
+const TIME_BEFORE_INTERACTIVE_MS = 2300;
 
 export default function Nav() {
 	const [isLockedLink, setIsLockedLink] = React.useState(false);
